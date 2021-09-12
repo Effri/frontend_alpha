@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="./assets/css/chat.css">
+    <link rel="stylesheet" href="./assets/css/hud_new.css">
+    <link rel="stylesheet" href="./assets/css/noty.css" />
+    <link rel="stylesheet" href="./assets/css/theme.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div id="safezone">
+        <div class="inGameHud" v-if="show" v-cloak>
+
+            <div class="header_hud">
+                <img src="./assets/images/hud/logo.png" class="logo">
+            </div>
+            <div class="head_stats">
+                <div class="line-one">
+                    <div class="time">
+                        <img src="./assets/images/hud/clock.svg"> {{time}}
+                    </div>
+                    <div class="money">
+                        <img src="./assets/images/hud/money.svg"> <b>$</b> {{money}}
+                    </div>
+                </div>
+                <div class="line-two">
+                    <div class="date">
+                        {{date}}
+                    </div>
+                    <div class="money-card">
+                        <img src="./assets/images/hud/bank.svg"><b>$</b> {{bank}}
+                    </div>
+                </div>
+                <div class="micro">
+                    <div v-if="mic"><img src="./assets/images/hud/micro.svg"></div>
+                    <div v-else><img src="./assets/images/hud/micro.svg" style="opacity: 0.2;"></div>
+                </div>
+                <div class="sid">
+                    {{personId}}
+                </div>
+                <div class="id">
+                    {{playerId}}
+                </div>
+                <div class="online">
+                    ONLINE {{online}}
+                </div>
+                <div class="ammo">
+                    <img src="./assets/images/hud/ammo.svg"> {{ammo}}
+                </div>
+            </div>
+
+
+            <div class="bonus">
+                <div class="bonus-bar" @click="showBonus()" id="bonus" v-if=" lastbonus == 'следующий бонус можно получить только завтра'">
+                    <img src="./assets/images/icons/notification/success.png">
+                </div>
+                <div class="bonus-bar" @click="showBonus()" id="bonus" v-else>
+                    {{lastbonus}}
+                </div>
+                <div class="bonus-block" id="bonus-block">
+                    <span>Отыграй 5 часов и получи 200 areal</span>
+                </div>
+            </div>
+
+            <div class="help-key">
+                <div class="help-key-btn" @click="showHelp()">Информация</div>
+                <div class="help-key-block" id="help">
+                    <ul>
+                        <li><b>M</b>Телефон</li>
+                        <li><b>О</b>Планшет</li>
+                        <li><b>F2</b>Меню помощи</li>
+                        <li><b>B</b>Завести двигатель</li>
+                        <li><b>L</b>Закртыть дверь</li>
+                        <li><b>J</b>Пристягнуть ремень</li>
+                        <li><b>N</b>Микрафон</li>
+                        <li><b>V</b>Показать пальцем</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="speedometer_hud" :style="{ opacity: inVeh ? 1 : 0 }">
+                <div class="speedcount" v-if="speed < 100"><a class="count">{{speed}}</a>
+                    <p>км/ч</p>
+                </div>
+                <div class="speedcount" v-else-if="speed < 200"><a class="count" style="color:#eda123">{{speed}}</a>
+                    <p>км/ч</p>
+                </div>
+                <div class="speedcount" v-else="speed < 300"><a class="count" style="color:red">{{speed}}</a>
+                    <p>км/ч</p>
+                </div>
+                <div class="fuel">
+                    <a>{{fuel}} л.</a>
+                    <img src="./assets/images/hud/fuel.svg" style="opacity:0.2" class="fuel_ico">
+                    <br>
+                    <a>{{hp}}/100 hp. || {{rpm}} rpm</a>
+                </div>
+
+                <div class="help_car">
+                    <div v-if="engine" class="helps"><img src="./assets/images/hud/engine.png" class="icon_help">
+                        <p>B</p>
+                    </div>
+                    <div v-else class="helps"><img src="./assets/images/hud/engine.png" style="opacity:0.5;transition: all .33s;" class="icon_help">
+                        <p>B</p>
+                    </div>
+                    <div v-if="belt" class="helps"><img src="./assets/images/hud/belt.png" class="icon_help">
+                        <p>K</p>
+                    </div>
+                    <div v-else class="helps"><img src="./assets/images/hud/belt.png" style="opacity:0.5;transition: all .33s;" class="icon_help">
+                        <p>K</p>
+                    </div>
+                    <div v-if="doors" class="helps"><img src="./assets/images/hud/door.svg" style="opacity:0.5;transition: all .33s;" class="icon_help">
+                        <p>L</p>
+                    </div>
+                    <div v-else class="helps"><img src="./assets/images/hud/door.svg" class="icon_help">
+                        <p>L</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steet_block">
+
+                <div class="info_block">
+
+
+
+                </div>
+                <div class="info_table">
+                    <div class="needs">
+                        <div class="eatings">
+                            <div class="eatings-ico">
+                                <img src="./assets/images/hud/eat.svg">
+                            </div>
+                            <span class="info-progresbar">
+                                <span v-bind:style="{ width: eat + '%'}"></span>
+                            <b>{{eat}}%</b>
+                            </span>
+                        </div>
+                        <div class="water">
+                            <div class="water-ico">
+                                <img src="./assets/images/hud/water.svg">
+                            </div>
+                            <span class="info-progresbar">
+                                <span v-bind:style="{ width: water + '%'}"></span>
+                            <b>{{water}}%</b>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gps">
+                    <div class="crossingroad">{{crossingRoad}}</div>
+                    <div class="street">{{street}}</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="chat" class="chat" v-cloak>
+            <ul id="chat_messages">
+            </ul>
+        </div>
+
+        <div id="prompt" v-if="text" v-cloak>
+            <div class="text" v-html="text"></div>
+        </div>
+
+        <div id="notify">
+        </div>
+        <div id="effect"></div>
+
+    </div>
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha512-1EYgCUCJVtr5ociXCkVxNVIuys2voHSsekuPLW9YJ9+6OiFiBLob/HNwg9C3oEmJuYvCYtnKdGpGwZPPKQzvHg==" crossorigin="anonymous"></script>
+    <script src="./assets/js/hud.js"></script>
+    <script src="./assets/js/chat.js"></script>
+    <script src="./assets/js/noty.min.js"></script>
+    <script src="./assets/js/notify.js"></script>
+
+
+
+
+    <script>
+        function hidehud(toggle) {
+            if (toggle) {
+                HUD.show = false;
+                logotype.show = false;
+            } else {
+                HUD.show = true;
+                logotype.show = true;
+            }
+        }
+
+        function hidehelp(toggle) {
+            if (toggle) {
+                $('.help').hide();
+            } else {
+                $('.help').show();
+            }
+        }
+    </script>
+
+    <script>
+        function updateSafeZoneSize(screenWidht, screenHeight, safeZoneSize) {
+            var savezoneDiv = document.getElementById("safezone");
+            safeZoneSize = (((1.0 - safeZoneSize) * 0.5) * 100.0);
+            savezoneDiv.style.right = savezoneDiv.style.left = ((screenWidht / 100) * safeZoneSize) + "px";
+            savezoneDiv.style.top = savezoneDiv.style.bottom = ((screenHeight / 100) * safeZoneSize) + "px";
+            return true;
+        }
+    </script>
+</body>
+
+</html>

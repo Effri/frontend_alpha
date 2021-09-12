@@ -1,0 +1,665 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@media (max-width: 1300px) {
+    .inGameHud {
+        zoom: 70%
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .inGameHud {
+        zoom: 80%
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1650px) {
+    .inGameHud {
+        zoom: 80%
+    }
+}
+
+@media (min-width: 1651px) and (max-width: 2560px) {
+    .inGameHud {
+        zoom: 100%
+    }
+}
+
+@media (min-width: 1651px) and (min-width: 3840px) {
+    .inGameHud {
+        zoom: 150%
+    }
+}
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+#effect {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#safezone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .58s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+
+.inGameHud {
+    position: absolute;
+    margin: 0 auto;
+    line-height: normal;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    -webkit-animation-name: opacity, slide;
+    animation-name: opacity, slide;
+    -webkit-animation-duration: .5s, .5s;
+    animation-duration: .5s, .5s;
+    -webkit-animation-timing-function: ease, ease;
+    animation-timing-function: ease, ease;
+}
+
+.inGameHud .header_hud {
+    position: absolute;
+    top: 30px;
+    width: 90px;
+    height: 80px;
+    display: flex;
+    font-size: 16px;
+    right: 2%;
+}
+
+.inGameHud .head_stats {
+    position: absolute;
+    top: 120px;
+    right: 2%;
+    width: 224px;
+    height: 83px;
+    background: url(../images/hud/head-stats.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inGameHud .head_stats .line-one,
+.inGameHud .head_stats .line-two {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.inGameHud .head_stats .line-one img,
+.inGameHud .head_stats .line-two img {
+    margin-right: 5px;
+}
+
+.inGameHud .head_stats .line-one .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.inGameHud .head_stats .line-one .money,
+.inGameHud .head_stats .line-two .money-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.inGameHud .head_stats .line-one .money b,
+.inGameHud .head_stats .line-two .money-card b {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E4C08F;
+}
+
+.inGameHud .head_stats .micro {
+    position: absolute;
+    top: -7px;
+    left: 40px;
+}
+
+.inGameHud .head_stats .sid {
+    position: absolute;
+    top: -7px;
+    right: 60px;
+    min-width: 47px;
+    height: 18px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #E4C08F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.inGameHud .head_stats .id {
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    width: 47px;
+    height: 18px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #E4C08F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inGameHud .head_stats .online {
+    position: absolute;
+    bottom: -7px;
+    left: 10px;
+    width: 91px;
+    height: 18px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #E4C08F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inGameHud .head_stats .ammo {
+    position: absolute;
+    bottom: -7px;
+    right: 10px;
+    width: 47px;
+    height: 18px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #E4C08F;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inGameHud .header_hud .logo {
+    position: absolute;
+}
+
+.inGameHud .header_hud .online {
+    position: relative;
+    left: -35%;
+    top: 15%;
+}
+
+.inGameHud .header_hud .id {
+    position: relative;
+    left: -120%;
+    opacity: 0.5;
+    top: 15%;
+}
+
+.inGameHud .header_hud .pid {
+    position: relative;
+    left: -205%;
+    opacity: 0.5;
+    top: 15%;
+}
+
+.inGameHud .header_hud .user {
+    width: 51%;
+    position: relative;
+}
+
+.inGameHud .header_hud .onlinecount {
+    position: absolute;
+    top: -1%;
+    left: 62%;
+    letter-spacing: 0.05em;
+    color: #ffffffb8;
+}
+
+.inGameHud .speedometer_hud {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+
+.inGameHud .speedometer_hud .speedcount {
+    position: relative;
+    color: #ffffff52;
+    display: flex;
+    justify-content: center;
+    width: 150%;
+    margin-left: -27px;
+    margin-bottom: 2%;
+}
+
+.inGameHud .speedometer_hud .speedcount .count {
+    font-size: 3em;
+    font-style: italic;
+    font-weight: 300;
+    color: white;
+    transition: all .73s;
+}
+
+.inGameHud .speedometer_hud .speedcount p {
+    position: absolute;
+    margin-top: -13px;
+    margin-left: 7px;
+    letter-spacing: 0.1em;
+    font-style: italic;
+    transition: all .33s;
+}
+
+.inGameHud .speedometer_hud .fuel {
+    margin-left: 57%;
+    margin-bottom: 11%;
+}
+
+.inGameHud .speedometer_hud .fuel a {
+    position: absolute;
+    margin-top: 4px;
+}
+
+.inGameHud .speedometer_hud .fuel .fuel_ico {
+    width: 28px;
+    opacity: 0.4;
+    margin-left: 50px;
+}
+
+.inGameHud .speedometer_hud .help_car {
+    display: flex;
+    right: 3%;
+}
+
+.inGameHud .speedometer_hud .help_car .helps {
+    display: flex;
+    margin-left: 13px;
+}
+
+.inGameHud .speedometer_hud .help_car .icon_help {
+    padding-right: 4px;
+    width: 27px;
+    height: 25px;
+    transition: all .33s;
+}
+
+.inGameHud .speedometer_hud .help_car p {
+    background: #6f6f6f78;
+    line-height: 1.7em;
+    width: 28px;
+    margin-left: 11px;
+    font-weight: 100;
+    font-size: 16px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.inGameHud .steet_block {
+    position: absolute;
+    bottom: -2%;
+    left: 16%;
+    width: 150px;
+}
+
+.inGameHud .steet_block .info_table {
+    display: flex;
+}
+
+.inGameHud .steet_block .info_table .icon {
+    margin-bottom: -16px;
+    width: 20px;
+    margin-left: 3px;
+    transition: all .33s;
+    opacity: 0.6;
+}
+
+.inGameHud .steet_block .info_table p {
+    background: #6f6f6f75;
+    width: 30px;
+    padding: 1%;
+    line-height: 1.5em;
+    text-align: center;
+    margin-left: 13px;
+}
+
+.inGameHud .steet_block .info_table .activeP {
+    background: #ffff;
+    color: black;
+    width: 30px;
+    padding: 1%;
+    line-height: 1.5em;
+    text-align: center;
+    margin-left: 13px;
+}
+
+.inGameHud .steet_block .info_table .info {
+    margin-left: 2%;
+}
+
+.inGameHud .bonus {
+    position: relative;
+    top: 240px;
+    z-index: 999;
+}
+
+.inGameHud .bonus-bar {
+    position: absolute;
+    right: 2%;
+    width: 60px;
+    height: 56px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #E4C08F;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.inGameHud .bonus-active {
+    position: absolute;
+    right: 190px;
+    transition: all 2s;
+}
+
+.inGameHud .bonus-block {
+    position: absolute;
+    right: 2%;
+    width: 208px;
+    height: 56px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    backdrop-filter: blur(19px);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 99;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.inGameHud .bonus-block-active {
+    opacity: 1;
+    transition: all 2s;
+}
+
+.inGameHud .bonus-block span {
+    width: 65%;
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #E4C08F;
+}
+
+.inGameHud .stars {
+    position: absolute;
+    top: 145px;
+    right: 59px;
+    display: flex
+}
+
+.inGameHud .stars .ico {
+    width: 25px;
+    height: 25px;
+    opacity: 0.4;
+    margin-left: 8px;
+}
+
+.inGameHud .needs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: -204px;
+    margin-left: 7px;
+    height: 86px;
+    width: 130px;
+    border-left: 3px solid #E4C08F;
+}
+
+.inGameHud .info_table .eatings,
+.inGameHud .info_table .water {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inGameHud .info_table .eatings span,
+.inGameHud .info_table .water span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.inGameHud .info_table .water .water-ico,
+.inGameHud .info_table .eatings .eatings-ico {
+    width: 37px;
+    height: 35px;
+    background: #0D141D;
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inGameHud .info_table .water .info-progresbar,
+.inGameHud .info_table .eatings .info-progresbar {
+    position: relative;
+    width: 74px;
+    height: 22px;
+    background: #0C141C;
+    border: 1px solid #E4C08F;
+    border-left: none;
+    box-sizing: border-box;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.inGameHud .info_table .water .info-progresbar span {
+    height: 100%;
+    background: #234CB6;
+}
+
+.inGameHud .info_table .eatings .info-progresbar span {
+    height: 100%;
+    background: #C03228;
+}
+
+.inGameHud .info_table .water .info-progresbar b,
+.inGameHud .info_table .eatings .info-progresbar b {
+    position: absolute;
+    left: 40%;
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.inGameHud .gps {
+    height: 44.69px;
+    border-left: 3px solid #E4C08F;
+    position: absolute;
+    margin-top: -94px;
+    margin-left: 7px;
+    width: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.inGameHud .gps .crossingroad {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.22);
+    margin-left: 11.5px;
+}
+
+.inGameHud .steet_block .street {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-left: 11.5px;
+}
+
+.inGameHud .help-key {
+    position: absolute;
+    top: 33%;
+    left: 1%;
+    z-index: 99999999;
+}
+
+.inGameHud .help-key .help-key-btn {
+    width: 125px;
+    height: 23px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #E4C08F;
+    cursor: pointer;
+}
+
+.inGameHud .help-key .help-key-block {
+    position: absolute;
+    left: -250%;
+    width: 350px;
+    height: 311px;
+    transition: all 1.5s;
+}
+
+.inGameHud .help-key .active {
+    left: 0;
+    transition: all 1.5s;
+}
+
+.inGameHud .help-key .help-key-block ul {
+    list-style: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #E4C08F;
+    padding: 0;
+}
+
+.inGameHud .help-key .help-key-block ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto 10px;
+}
+
+.inGameHud .help-key .help-key-block ul li b {
+    width: 31px;
+    height: 31px;
+    padding: 2px;
+    background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+    border: 1px solid #E4C08F;
+    box-sizing: border-box;
+    font-size: 24px;
+    backdrop-filter: blur(19px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}

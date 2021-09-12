@@ -1,0 +1,706 @@
+
+    #auth-form {
+		position: relative;
+		width: 479px;
+		height: 483px;
+		background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+		border: 1px solid #E4C08F;
+		box-sizing: border-box;
+		backdrop-filter: blur(5px);
+		border-radius: 5px;
+	}
+
+	#reg-form {
+		position: relative;
+		width: 479px;
+		height: 710px;
+		background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+		border: 1px solid #E4C08F;
+		box-sizing: border-box;
+		backdrop-filter: blur(5px);
+		border-radius: 5px;
+	}
+
+	#rest-form {
+		position: relative;
+		width: 479px;
+		height: 415px;
+		background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+		border: 1px solid #E4C08F;
+		box-sizing: border-box;
+		backdrop-filter: blur(19px);
+		border-radius: 5px;
+	}
+
+	.gta-acount .btnlink {
+		color: #ffffff6b;
+		position: fixed;
+		justify-content: center;
+		top: 4vh;
+		display: flex;
+		text-align: center;
+		font-weight: 100;
+		font-family: ProximaNova, sans-serif;
+		font-size: 1.8vh;
+	}
+	.gta-acount .personimg {
+		position: relative;
+		width: 18%;
+		left: 14%;
+		margin-right: 93px;
+		margin-top: 29vh;
+		margin-bottom: -38%;
+		opacity: 0.23;
+		display: initial;
+	}
+
+	.gta-acount .btnActive {
+		margin-right: 2vh;
+		color: white;
+		transition: all .98s;
+		border-bottom: 2px solid #eda123bd;
+		padding-bottom: 17px;
+	}
+
+	.gta-acount .btn {
+		margin-right: 2vh;
+		color: #ffffff78;
+		transition: all .98s;
+	}
+
+	.gta-acount .btnActive:hover {
+		color: white;
+		cursor: pointer;
+		transition: all .98s;
+		border-bottom: 2px solid #eda123bd;
+	}
+
+	.gta-acount .btn:hover {
+		color: white;
+		cursor: pointer;
+		transition: all .98s;
+		border-bottom: 2px solid #eda123bd;
+	}
+
+	.gta-acount .border_bottom {
+		border-bottom: 2px solid #ffffff17;
+		position: absolute;
+		top: 4vh;
+		width: 150vh;
+	}
+
+	.gta-acount .password-control {
+		position: absolute;
+		top: 1.7vh;
+		right: 1vh;
+		display: inline-block;
+		width: 20%;
+		height: 34%;
+		background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+	}
+
+	.gta-acount .password-control.view {
+		background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+	}
+	.images {
+		position: absolute;
+		margin-left: -115px;
+		margin-top: -12px;
+	}
+	.input-text {
+		display: flex;
+		/* padding-top: 5px; */
+		padding-top: 5px;
+	}
+
+	.recovery-block {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		margin-top: 25px;
+		width: 90px;
+		height: 25px;
+	}
+
+
+	.rec-text {
+		font-size: 13px;
+		color: rgba(228, 192, 143, 0.5);
+	}
+
+	.hl2 {
+		width: 100%;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.06);
+	}
+
+	.ico-box {
+		width: 47px;
+		height: 47px;
+		background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+		border: 1px solid #E4C08F;
+		box-sizing: border-box;
+		backdrop-filter: blur(19px);
+		border-radius: 5px;
+		padding-top: 14px;
+		padding-left: 15px;
+	}
+	.gta-acount .gta-acount__content .the-input {
+		margin-left: 5px;
+		width: 275px;
+		line-height: 47px;
+		font-weight: 100;
+		font-size: 1.5vh;
+		font-family: ProximaNova, sans-serif;
+		color: rgb(255 255 255);
+	}
+
+	.gta-acount .input-cont {
+		position: relative;
+		justify-content: center;
+		display: flex;
+		margin-bottom: 25px;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 74px;
+		/* margin-bottom: 5px; */
+		/* margin-top: 0; */
+	}
+
+	.gta-acount .input-cont1 {
+	display: flex;
+    margin-bottom: 21px;
+    width: 28vh;
+    margin-left: -7px;
+    margin-top: 31px;
+	}
+
+	.gta-acount .input-cont .label {
+		/* width: 100%; */
+		/* position: absolute; */
+		font-size: 11px;
+		/* padding-bottom: 3px; */
+		/* top: -14px; */
+		/* position: relative; */
+		/* margin-left: 0; */
+		/* margin-bottom: -3px; */
+		font-family: Roboto;
+		font-weight: 300;
+		color: #E4C08F;
+	}
+
+	.gta-acount .welcomeAuth {
+		margin-left: 175px;
+		margin-top: 40px;
+		position: relative;
+	}
+
+	.gta-acount .welcomeAuth .prev {
+		font-size: 13px;
+		line-height: 12px;
+		color: rgba(228, 192, 143, 0.5);
+		font-family: Roboto;
+		font-weight: 400;
+	}
+
+	.gta-acount .welcomeAuth h1 {
+		font-size: 24px;
+		line-height: 28px;
+		color: #E4C08F;
+		font-family: Roboto;
+		font-weight: 700;
+	}
+
+	.btns {
+		display: flex;
+		margin-top: 56px;
+	}
+
+	.hl {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		width: 326px;
+		height: 1px;
+		background-color: #E4C08F;
+	}
+
+	.rec-text:hover {
+		cursor: pointer;
+		color: #E4C08F;
+	}
+
+	.gta-acount .btnEnter {
+		width: 157px;
+		height: 38px;
+		align-items: center;
+		line-height: 38px;
+		text-align: center;
+		transition: all .33s;
+		position: relative;
+		margin-left: 75px;
+		margin-right: -55px;
+		background: linear-gradient(180deg, rgba(1, 13, 25, 0.5824) 75.05%, rgba(0, 0, 0, 0.64) 100%);
+		border: 1px solid #E4C08F;
+		box-sizing: border-box;
+		border-radius: 5px;
+		font-family: Roboto;
+		font-weight: 700;
+		font-size: 9px;
+		color: #E4C08F;
+	}
+
+	.gta-acount .btnEnter:hover {
+		cursor: pointer;
+		background: #ffffff;
+		color: black;
+		transition: all .33s;
+	}
+
+	.gta-acount .btnEnterSlot {
+		width: 56%;
+		height: 22%;
+		align-items: center;
+		line-height: 6vh;
+		text-align: center;
+		background: #607D8B;
+		font-size: 1.7vh;
+		color: white;
+		transition: all .33s;
+		margin-left: 11%;
+		margin-top: -1%;
+		position: relative;
+	}
+
+	.gta-acount .btnBlock {
+		width: 56%;
+		height: 22%;
+		align-items: center;
+		line-height: 6vh;
+		text-align: center;
+		background: #ffffff;
+		color: black;
+		font-size: 1.7vh;
+		transition: all .33s;
+		margin-left: 7%;
+		margin-top: -2%;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.gta-acount .btnEnterSlot:hover {
+		cursor: pointer;
+		background: #ffffff;
+		color: black;
+		transition: all .33s;
+	}
+
+	.gta-acount .btnBuySlot {
+	align-items: center;
+    line-height: 6vh;
+    text-align: center;
+    background: #ef4343;
+    font-size: 1.7vh;
+    color: white;
+    transition: all .33s;
+    width: 56%;
+    left: 2px;
+    border: none;
+    margin-top: 63%;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+	}
+
+	.gta-acount .btnBuySlot:hover {
+		cursor: pointer;
+		background: #ffffff;
+		color: black;
+		transition: all .33s;
+	}
+	
+
+	.label__checkbox {
+	  display: none;
+	}
+
+	.label__check {
+	  display: inline-block;
+	  border-radius: 5px;
+	  border: 1px solid #E4C08F;
+	  background: rgba(0, 0, 0, 1);
+	  vertical-align: middle;
+	  margin-right: 20px;
+	  width: 1.5em;
+	  height: 1.5em;
+	  cursor: pointer;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  transition: border .3s ease;
+    }
+
+
+	 .label__check i.icon {
+		/* opacity: 0.2; */
+		/* font-size: calc(1rem + 1vw); */
+		/* color: transparent; */
+		transition: opacity .3s .1s ease;
+		/* -webkit-text-stroke: 3px rgba(0,0,0,.5); */
+		}
+	  
+	  .label__check:hover {
+		border: 5px solid rgba(0,0,0,0.2);
+	  }
+	
+
+	.label__checkbox:checked + .label__text .label__check {
+	  animation: check .0s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards;
+    }
+	  
+    .label__check .icon {
+		/* opacity: 1; */
+		/* transform: scale(0); */
+		/* color: white; */
+		/* -webkit-text-stroke: 0; */
+		}
+	
+
+	.center {
+		position: relative;
+		margin-top: -9.5rem;
+		margin-left: 5.5rem;
+	}
+
+	@keyframes icon {
+	  from {
+		opacity: 0;
+		transform: scale(0.3);
+	  }
+	  to {
+		opacity: 1;
+		transform: scale(1)
+	  }
+	}
+
+	@keyframes check {
+	  0% {
+		width: 1.5em;
+		height: 1.5em;
+		border-width: 5px;
+	  }
+	  10% {
+		width: 1.5em;
+		height: 1.5em;
+		opacity: 0.1;
+		background: rgba(0,0,0,0.2);
+		border-width: 15px;
+	  }
+	  12% {
+		width: 1.5em;
+		height: 1.5em;
+		opacity: 0.4;
+		background: rgba(0,0,0,0.1);
+		border-width: 0;
+	  }
+	  50% {
+		width: 1.5em;
+		height: 1.5em;
+		background: rgba(228, 192, 143, 0.5);
+		border: 0;
+		opacity: 0.6;
+	  }
+	  100% {
+		width: 1.5em;
+		height: 1.5em;
+		background: rgba(228, 192, 143, 1);
+		border: 0;
+		opacity: 1;
+	  }
+	}
+
+	.icon {
+		color: rgba(0, 0, 0, 1);
+	}
+
+	.savemy{
+		position: absolute;
+		width: 15vh;
+		font-size: 0.8em;
+		top: 24px;
+		left: 33px;
+		color:#E4C08F;
+	}
+
+    
+	.gta-acount input[type='text'],
+	.gta-acount input[type='email'],
+	.gta-acount input[type='date'],
+	.gta-acount input[type='password'] {
+		width: 275px;
+		height: 47px;
+		background: rgba(255, 255, 255, 0.04);
+		border-radius: 3px;
+		border: 0;
+		text-align: center;
+		outline: 0;
+	}
+
+	.gta-acount input[type='text']:focus::-webkit-input-placeholder,
+	.gta-acount input[type='email']:focus::-webkit-input-placeholder,
+	.gta-acount input[type='date']:focus::-webkit-input-placeholder,
+	.gta-acount input[type='password']:focus::-webkit-input-placeholder {
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+	}
+
+	.gta-acount input[type='text']:focus::-moz-placeholder,
+	.gta-acount input[type='email']:focus::-moz-placeholder,
+	.gta-acount input[type='date']:focus::-moz-placeholder,
+	.gta-acount input[type='password']:focus::-moz-placeholder {
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+		color: #fff;
+	}
+
+	.gta-acount input[type='text']:focus:-moz-placeholder,
+	.gta-acount input[type='email']:focus:-moz-placeholder,
+	.gta-acount input[type='date']:focus:-moz-placeholder,
+	.gta-acount input[type='password']:focus:-moz-placeholder {
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+	}
+
+	create-person-2 .gta-acount input[type='text']:focus:-ms-input-placeholder,
+	.gta-acount input[type='email']:focus:-ms-input-placeholder,
+	.gta-acount input[type='date']:focus:-ms-input-placeholder,
+	.gta-acount input[type='password']:focus:-ms-input-placeholder {
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+	}
+
+	/*
+	.gta-acount input[type='text'].entry-login {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALgSURBVHgB7ZpLa9VAHMVP9Fr1WusLxIVFUKkPECq6EF0oCEXwia5Ev4N+hH4PN25cFKlaF26Lq64qLnzga6EiCC7qq9be9jY9h+SWSSgt3Jl/Ekp+cJg7A3cmJzOZ/GcyEQIQx/FOJqepA1QftR52zFE/qVfUZBRFf1UYwROaOM7kArURxTNF3aeZX+vgAU3sYXIR5ZgQO6hbvI5mA13CP6s3z1NuHW3qD2zRsN3q5HdTp7o2QrZQ/U7+P/WY+siubsMI3kC1e5I6S3VG1IDP0FKFm5z8N+q9pQnB+qeZTFDTTvEuHyMbcvkZNhKjANhOC8kwXroWr4e9StRGqkZtpGqsGSM+L0QFay+d/HeUSNdGOJcrAn2CimA6tBhOFBZMmhmhiSNM7jA9hgIwMcKL38vkEtWkLjPfD2OCG+FFb2ZyFUlQKXqo2yzfB0OCG+EkMMNknGo5xXpWtAA6BCNMhhbNvEEyo807xeqZ6zRzEAZYzlpvkSy08j1zjWb2IzBmRrQ2oV7z5wiyPdOLpGeOIiANVjiM4pEZ9UybZt8hAGXGWnpmgk3NZQeNPQhEmUY0CTzg0PqKADRY0TAMSUOVG8gGqDIxyrY/IxA+Yfyq0MQgk6FcOwr/H4Y0ARgaSU1cQXb4ysRYaBOAXdCod8RQrn4Np2c08QEGBO8RmtDGnfaEm05xpydMTAiLoFHfLx5Rv9Mi9cSIpQlhFTRqH3iM+kc9DTXFrtgmDNFSlyZmYQDrvstkeydv+kK0MrEcPh96dDfOOUVfeOEvUBI+s5Yi2MFcXaUZqbdMq0ZtpGrURqqGj5FWLt+bHiIwRycdkD3vMudjRAcEXDPa7z3MRiwP1HSi6zPInn6Y6voOpnf/JjXgFOvbtz7kL8AO3SjtK7udMO7zoYde4uf8qV3DhtNIH4pFJ4QmvR72NFwfpQoLDnP8oO7pzFaQhzM97nSC0gb1NtjOhlq4ycAnaoImtObBIpcB0gBGbKXVAAAAAElFTkSuQmCC');
+		background-position: 94% 7px;
+	}
+
+	.gta-acount input[type='text'].entry-login:focus {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ9SURBVHgB7Zq9SxxBGMafTY6Y5Cy1sEogVYoUKRLyUSRlLggxYAIpzR8SISR/QkgTiF3aQIqAnYU2Iih4jYViodyJouCd3/D6DDuH43BXuPOxe7I/eHjZAffdx5nZeWdvAA+IyAPqJ7VKHUtY2tQy9YUagS94sw/UpuRDnbqnniOBA7zJY4Y56jbyo069zmyEJm4y/KNqRvMJtUWdIRwD1DBVMdq+Iys0MkTtGd18KOkwu4WA8P7D1Ffq1Mi9gKzwjx9Z43WachqqV8g9KJfnZesGslO1rneSJBFEgHlaDMdGU9XFSKEojRSN0kjRuDZGKshOg5oyrpdQcnW4CK6Zq3HQocX730UkghmhiTEGtT/5hH5F12Ebuteb1At4xh5a8I2uiutWQblP1eCR4EZ0knFVkVpm1PU7eCKWkYSaoI669MwreCCKEZ0o6dEzTR/DLJoRnUyZedOjZ8bhgG2kEtxNdwap30zd5ibpPzyQZ62lzEz5mjN5F41q5T+FB/I0ovbdHzm05tAPcOiM9ZjsTmtKHq/fbctEo69ev7z3e0k/2pmoNeUtPCARaq1ePdFyXTusPMGNVKkVy0RTPNZZOk9YIzrJc7koTVT0slZYOaIY6ZQmamIH2VhJ5For2FZXYu7ZudgdIBKZPwfxn3CfYdJomuWD/0K/QSPPrDfTH0Qk6tCKSWmkaJRGikZphLSt6xGJ9/O0OjAwYDS1XYzsIt2udnhK1STwF3hVXTNMID390GHd9QjHX2rUaFZHOLZ1DEW3IxyTrodqnjDMUHeQH6vUS6fJztpqnuEztYN8UCeDRvkcDfiAPfOQ+iHpwbMTCYvaqC1S36ihzjOcA86QfNOkiNRFAAAAAElFTkSuQmCC');
+	}*/
+
+	.gta-acount input[type='text'].new-user__login {
+		background-position: 95% 7px;
+	}
+
+	.gta-acount input[type='text'].new-user__login+.placeholder {
+		font-size: 20px;
+		position: absolute;
+		top: 6px;
+		left: 37px;
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+		pointer-events: none;
+		opacity: .8;
+		color: #a0a0a0;
+	}
+
+	.gta-acount input[type='text'].new-user__login+.placeholder span {
+		text-decoration: underline;
+		color: #ef4343;
+	}
+
+	.gta-acount input[type='text'].new-user__login:valid+.placeholder {
+		display: none;
+	}
+
+	.gta-acount input[type='text'].new-user__login:focus+.placeholder {
+		opacity: 1;
+		color: #fff;
+	}
+
+
+	/*.gta-acount input[type='password'] {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARHSURBVHgB7VrZahRBFL1jErcYdwX3KO4LLqioiLuI6IOg6ItP/oDf4Jf4oA+C+qCguGCCQSFoyIImJKJk0YgSjWRVsnqOXZ3U3HRnMtVjpqM5cJiuvl3VdWq9dXsSkmEMDg7Ox89GcDXI63wwAXaBrWAd2Ai2JBKJQckQEpIhQEABfg6BW8HpKR4fAMvAYoj5JRlAZCEQwDLY+ufBmZIe2Ev3wPdReyeSECPiIHhARvYCK8bW7jXvyTXP6Hf2g0/BV1HE5Eo0rASPSnLlWJlm8KX5/WnsM8Bl4F5wlZUnBzwBfgM/iCOcewS9wWF0BVxg3e4An4HVaN2+kHxsPM6jY2CBZaKQ68jXLQ6YIu7YJckiOsHbqEhVmAiCNrASl7fEG3Y+FoI7xRFOQtCq08QTYqMIFfwoYwSe/Yyfh+r2YVN22nDtEY7xuVa6HayS9FENtlnpPLBQHOAqZI0kz69KtPCApAnk4dCqVLdXiANchcxS6RZxR6NKzxYHuArRG1+XuKNNpfPFAa5CdL4ou/JAirLHhCjLb6wwKSRumBQSN4zqNBo3fbl4uy3X9zxj0jt7g4xcRscKuvYbrDRd/zpz3WPKbQK/YgPtCSskVAhErBPPQ6UzF9Xdjwou7/SOH0NMoKsfKAQi6GafkdRH1vEGver7EPNGG0bMEYhgN5+V+IkgODLOoo4bgwxDMIelU6DtSvMoWi6eTxTFFXEBG5OnUJ4qc8y9qeBp1LUZPdPhP6jH/iZwnpWmd3oHGd5J9lCLSnNeXJDhUcKFh3O43H9ID61ClX6RZRF/YCZ4kbq91k5oIYtUukLiA92g8+2EFqKPmZ0SH7Sr9FQ7MerOnsmQZlQE1CVp65j0teKG/1sI1vV8cFaILRecYxxObUuAs8GckLzTWW5Q3lRI2xnES3aI54dNwfVzTMISy8bI42XxPOMGpG/4YSJTuXPgNrDX2D5ZebnBcdOjh10KPpE04NIju8VrAObdo2zbZdi9LxTP3ffB6AhFUBCXTh0e3Wfu076VvSMj0Rdy7STEXs87lO27DEdU6KPZZxSeJbpDytFp+nRB8WNGMwcMkyKbLueMR+ZFHOclyvZWvFYtBCswdFp9Aw9FaOW74sWMv4CvVV4OJQrl3CsNCYQ/EC8y2W/KGELSpMKLrop18kNh12SCYHIfiRv+GSHZDiqkBczhJfjZb5L8tP3Dt00oIeJ9Avc/9/FYftM36KHVbydcP4P9DaAuXNbtw9Qc266F6A1ulcQH9idtIikgqIU0qPRxOnmSZZi/hxxRt5vshBbCc7G9oy4GL6GgFdkYZnhnHsiQ7UVwqWVidKfWfjbI1T4p3l8ybNC3oVvSL+MLukH8x4RelMqwYj2wbwStWsXiTaQt1j32XIHEAzXgY30zLPZLgYw48uwRlyWaQ54x34dBDmWqzwr85r0ZXC9ej+TJ+IKuP1fSerAGAurDHvwNF5FB8U9RCcIAAAAASUVORK5CYII=');
+		background-position: 95% 7px;
+	}
+
+	.gta-acount input[type='password']:focus {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPGSURBVHgB7ZpNSBVRFMfPsy+1UlMDKxUlpI2RREVJRBJF0semTYsWEQUiRC5cFBEFQZtCgj4W9mGBJCQEtYkIykIMbCHulCIRU1NEw9J6aN3+hzfEnfPeTG9Gm7nU+8OPeXfuPXfOeXO/34vQPEsptR6XvaAKrAP5IA18Ah/AE9AGeiORyCyZJgRQCFrAhPqzJsEDsJpMEZyJgN1gVHkX21RzHRSmrCDOgGgCJ3+AcTBgMW7dk5oGdRSm4MB+MCMcmwVPwUFQANJBBiiyvv3H4Kew+QYOUBjCg/NAr3BoEBwGS1zsOLAaMCxse0AuBS089IJwZARUerDfDL6IOk5RkMIDs6zmoOsIeRRsjoo63oEVFJS4PQsHuDMvIo+CzVLQr9Uz7bevpJE/7RLpO5jcZsijYDOFyyPtVgbYTj7kNxA5kb0k/+oU6SLyIb+ByNFlkPxrTKTzyYf8BrJApD03Kxdbz32N5TcQqeBGGgfNVyATFLJSb8Q0/TNNa6FbJmbZTFwqKLbbKwTpVlaJKHoVZT+TP+WIdAXqarI+T4N+0A66rQnUm1Rsyd0FvqvwxfsY9mWP1yCOqfhFoQlin04kGwTvJyaVuWLf4t5MRASRh8tbUKrd5pm3EbwGoxSs2B/e45wk+4zPS6It6DNDCa0QSK2InpfY4WxB7X7tAFPCt1o3gxZR+LQK+4SDfh9ynBW+tboZdInChWSI4EuJ8K1bz5cTYrZIz2V5Pt/qF+nlekIGYmtG6EyKDFECX2y+ptZapun/DgQjxkpQ4JDHx6PFiYZt3EtTsaPTdAfbbLBKzXXIRwV9+vjmUOa4ip0/8ZnveZFXodXRpjtsBdGqYue+caeSSB8CX638Gw5fhK6+uQbyRisyLPIuiodt0vLKlP3w+pawfa7XqxKcOCr7SrxHz/PTtIYcPrPe8/Osz7xG0+ehMbIf/QwI24/a5xEQpXjdB7MWTeSkJN8It/EGcB2UirzFoA7cBdUJbKvAbVAPlom8XHAJNIKNDs/mpcpWsEG59aNkAjFVqXnENKUCCUM8CIBmcA+sdStodGdX9t8sn+l58o1EhWEWGSL4wnulMu1WsZ4vA5EbKV+/Hv0l8ZJGnztsE6oM5JVIn1MGbHfhwxpcrojb7W4G5Sq2INTVCSpBDgUsnv3BNtAhfGIfy/Wy8lyL0zdBjaiT1028TopSsOI/HvDiUS77G0C961acv3nwUJkr3gqkUzJSsb9ZXFZmnf+yL9eUw99DIi7B8ECwE/BJ4z7AHS6TghX/jMAj6QvQDDqcmtMvBy1/l7v9MMYAAAAASUVORK5CYII=');
+	}*/
+
+	.gta-acount input[type='email'] {
+		background-position: 95% 7px;
+	}
+
+	.gta-acount input.promo-code {
+		height: 50px;
+		margin-top: 33px;
+		border: 1px solid rgba(255, 255, 255, .3);
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATGSURBVHgB7Zrfb1RFFMfPxRZKobU0iASVIqUxYPxtGmOMPpAYnwzxhUf/RBOJGn3QRB8ErRpFISol9UepIOIipa1Uun4/zBl6c+nunbubwC253+Sbu7l75sw5M+fMnJ3ZzCqg3W5neoyJU+KEuE8cEK+Iv4lz4oUsy5ZK9Ax6+wPio+Ju8V9xQfxV/FlsSU/bEpFZBciAST2mxYPuQBEtcUb8SkasdNAxpMdh8VULg1LETXFW/Fz8XXr+swQkOyIDHtHjmIXRi1jxjodzupbFb8SPZcTNgo4H9DgqPuNtbr0WmUG+G8qJMyjvScc5S8BAipAMGNHjDXdiTbwonrIQSmtuwMvik/75WXFB7X6I4eFhedid2C6uit+KX7rzOLJHfF3cZWG2XlO7i9JxrczGUkfcgOcs5ANGXRBPSPmlnNg1yX2k542coU+57BWXGXY9PAkXZu2TQgi2pOdvPd8UiYCHxef17tOyfNli5dgq7nVZOv1a/LMopI4YVfJj3l/tF48QTh5SU24cBl1GtkMe/eV98B2Lwh63wfp1ZIc44p8XMbTL6GDEGQszQ4gd8rbwiLjNQk5977J3QLoJ1Xnvy7ztTrP+HRlyAwAh0XFpdSO+s5CogFkhJJnRSX/HbHzhsp1AH6sb9N8RKcnOFC/nlJKEi52EZeCqQolZIb7JL3IGo+OgnUXGuoM+ovHLbkNXpMzIdTGuGkzzQY/5bjhr6zP3uIV9x/zdmW4NpXury8dw/se6DFxEiiPE+08Wdl5m8EXxUIkzV8W4/pOwMVnPuWHdMOV90GbF25TNYAgtX2IJG0aBpbO4UcaY3eYyx8XTanfeDSsmP+0JCRI7OsxnltZ9ale0gwF90ELZ8nSuf6KB2ZgotGm7PUTKIotP5iNLQlJ6PCaOWsXS5R6AnMMJ6jI21TkcwQk2INbrujtQBA6xjL9DaL1g604QJiyPN6w6CDtWKnZuwuiXDfQQ94QPUUC4zrtsVaDnIQthTtn0Eo6wvmfe6buKt1nrAZpZlsxjbij58YF0XS7I0OnbFjY4qoP3JdOyHiBdrGzH3akDJNmof0diXbLNAwbiun8ewZGYF8Rb8g+ZGgBbY3WQbbF14zPbfMke98E2H2L5QXE4ZpsH4xZsBksk+x8WSgJWnaNKojkLxWFV0H60gjyy0+pvyaqDVY/SJ1YMCzhy0sLyi3esOGyKa9YbymqwPJh9NuFe8jLzvuLP5Bkcocw4Ib5iYYdHIKUG6xfRmF7B/sM+xI+52QEOCDS9HL8wC29ZqLVY23+0hPI5B2q1Jyw9z/rtg33vM/E8v21uFY0UXQKK4y5L9XqyymblG+JeS3ek3z6wtRV/oN2NELoraBypGxpH6obGkbqhcaRuaBypGxpH6obGkbqhcaRuaBypG+5LR/JnWRzT1PH4FHvzR0i3bc7f6nI3wtEMR/4c2E3q1ILjmtQDtO2FTobVvng/viP3Gdmdkkk91WRg97tt5rZezX95G1LK/02m/T0OcOeXeurIaHHxMuht6KR4iYPxY66fO8BFS7/oQf94NFU8paOgD+OXxXt2Tu24dZrwzsatN9DprhKZwQSZjRD/DzOTf1mckThi/LuHE73dVp9cwQEud7gqP134U4/9D9jodcthwAw4AAAAAElFTkSuQmCC');
+		background-position: 95% 11px;
+	}
+
+	.gta-acount input.promo-code:focus {
+		border: 1px solid #ef4343;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASySURBVHgB7ZpLaB1lFMfPvU1a0dhGsTYmYiMVrH1owaqI9VHEqCjFhYibGlE3igouFMGFK90oirpoEbpQfCyMEnxstNKiFiUqVEVaEZuUVpPaRFPtI01uM/39M2eaYXpz585NWibl/uHHncycOec78z3mm+9LwTIoCII5/CyGu+BGuBrOhj/gG9gK3xcKhaEUP7rnJrgFrofL4T/YDl/DZ7AbP8fsVIgCdEA3HAnKqxeegeYKPprhEbctp6MeYy2cZTMtnF4HO2IBx2EYBqAUO/8PvASNZXw0wsvwd8z+mPsYdp+RdsGdNpPCYSts8wBj8CN0wmJog2WwCQ55YfbD/VCM+Sj6uUG3ke0GWOk+5Otu2OkxpG8V22ZCOCrAc+583J0v1/mE3XnwBhxwu0/gstj1C2GzXxtx2+Yy8VZ4DNkdhueTsWpNZD50+RMagoeCsNOXs10eK6yayrMwF+bBg7Hms122U/iY4zGGPKZin5tWzqKlaxG0+fEA9FQYTXbCB3AAFsAd0Orc6+dG4D23PUnuuwf2+amWWHybTiIKHj0RFWLKodUL8Q7s9lM3wLWwCjr83O+wIWVoVYxDfqzm12QparB0DcO/Mad6j/RPZUwB1Yk/5PAq998JoxCNYl3Y/G+VpRgLYvGHU+yrqhFV8V8QWNhEblObT7lHiQz68Vrd48c611XpxiB8Wcq+xWP+aZPNrHb5qPWAd1RpL6xTJ65wTxO8HZwsnWtKiXefxwg85vpqRq2GqLD8nG9hp1LzSdbUfjhsYXXL5iN4n/u+5HcPJNu7/Kmdq0lFCY9BL6zmvnLlUHNaA+shGhX3eeybE/foD/UhtZR+murE01YgdcjHLOycbTFHeVXJwiS2wVuwRYms5mATrLDq+kyepIR+g04l8iYHD1uYhDrWDjho2TUfroQLLGxSX5Xxo/6hWa9agTp+j9tm1TmwzMLWM256L5FIn3esg9BhNYp722GL++qHpWVslvq1wG3brUZx7+1eZmmPauFiv6aO9YvNHv1sk8NyqxKJOraqOLDZI5V1zI+LRZssvBKa/izz9CqqhInvhWjupMnhEps90ifCIj8e1IvoJ7jVwlHnBTrOVn6PWHbp/ksy2Mv2ceINWnbpE1hTn2gy+4MSecXCoUxzGw2NWgyo9aN/bgbbdnjCwuEzq9QFNN9Tt9Cbf6MS2QyPwtNwjRem0U69ipYt8aQ0OOk9tBE+b2CeMkr1fuoX9C2hOVcfdFsV0+eYNEe7x8InXY36phlDL9sX4QtyKE1MGvWRQzKa0I3GgrzG+b4qA5i/3FZZtkSmE0Nl7VUSujbb5lZTqp5I3lRPJG+qJ5I31RPJm+qJ5E31RPKmeiJ5Uz2RvKmeSN50Riaij/ho+XSe5TNJLZZE+5cqayl+IZL2RvQfOhfBStCyfbdVv7CtZaT4OtVC7QEmbBbGjmXbgs2IVSctyq3xsknay98bv3hCOH2VnyctrA0lsMsmV7zTpIeiXV/tymqlUnvtyU0cFV57hVp81p7kgFW/0SP/S7zMWp18naWgp8pa+kaMNmBKQX6lsn0XJDaSkjWiJ3aphZv86+AKy09fUS1oW/BjeJfa+DV+8Ths8fsmuxz72AAAAABJRU5ErkJggg==');
+	}
+
+	.gta-acount .checkbox-and-link {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		margin-bottom: 59px;
+		padding-top: 5px;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox'] {
+		display: none;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']+label {
+		font-size: 20px;
+		position: relative;
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		padding-left: 72px;
+		cursor: pointer;
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']+label:hover {
+		color: #ef4343;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']+label::before,
+	.gta-acount .checkbox-and-link input[type='checkbox']+label::after {
+		position: absolute;
+		display: block;
+		content: '';
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']+label::before {
+		top: 2px;
+		left: 12px;
+		width: 44px;
+		height: 24px;
+		-webkit-border-radius: 18px;
+		border-radius: 18px;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']+label::after {
+		top: 4px;
+		left: 12px;
+		width: 20px;
+		height: 20px;
+		-webkit-border-radius: 24px;
+		border-radius: 24px;
+		background: #fff;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD+SURBVHgBtZJNasJAGIbfmem2YNpV6aKlvUAP4MIaQdBVoXu9ifEGnkAUDyCu/QuI11DxAslGTDDJ+I2KGoI6QXxgYDL5npdvfoA7YUiJk8tluBAVEt3nbLaTKmBdKn14vm/T9POwNNAOWBWLb5sgmEjg+7goZcR1ZLdcNvwg6MfkPfbNDtSewfkYjP3Efki5QBT9sntkw7YXzMnn/6igqTqlYRnDYVtXVp/MMc05TqcKAVTDMOzpyIonGpnzmhBoQYgZTb9uyQoeSVlHEi15F/A6GjWoVQuXuCIrjrfgFAo1KrbSyLGARIiGnAhQuKb5Ty/uXXpe92U6XeLRbAGWCIv/Ks65mgAAAABJRU5ErkJggg==');
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: 8px 8px;
+		background-size: 8px;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']:checked+label::before {
+		background-color: #ef4343;
+	}
+
+	.gta-acount .checkbox-and-link input[type='checkbox']:checked+label::after {
+		left: 35px;
+	}
+
+	.gta-acount .checkbox-and-link .restore-pw {
+		font-size: 20px;
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		height: 29px;
+		margin-left: 170px;
+		/*border-bottom: 1px solid #fff;*/
+	}
+
+	.gta-acount .checkbox-and-link .restore-pw:hover {
+		-webkit-transition: all .33s;
+		-o-transition: all .33s;
+		transition: all .33s;
+		color: #ef4343;
+	}
+
+    
+    @media (min-width: 2500px) {
+        .gta-acount {
+            zoom: 1.3;
+        }
+    }
+    
+    @media (min-width: 2000px) {
+        .gta-acount {
+            zoom: 1.2;
+        }
+    }
+    
+    @media (max-width: 1800px) {
+        .gta-acount {
+            zoom: .9;
+        }
+    }
+    
+    @media (max-width: 1600px) {
+        .gta-acount {
+            zoom: .8;
+        }
+    }
+    
+    @media (max-width: 1400px) {
+        .gta-acount {
+            zoom: 0.7;
+        }
+    }
+    
+    @media (max-width: 1300px) {
+        .gta-acount {
+            zoom: 0.6;
+        }
+    }
+    
+    @media (max-width: 1140px) {
+        .gta-acount {
+            zoom: 0.58;
+        }
+    }
+    
+    @media (max-width: 1000px) {
+        .gta-acount {
+            zoom: 0.5;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .gta-acount {
+            zoom: 0.4;
+        }
+    }

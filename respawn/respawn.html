@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spawn Select</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/respawn.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/respawn.js"></script>
+</head>
+
+<body>
+    <div id="spawn-select">
+        <div id="last-spawn">
+            <span id="last" class="active">МЕСТО ВЫХОДА</span>
+            <b>ВЫ НИЧЕГО НЕ ПОТЕРЯЕТЕ</b>
+            <button onclick="spawn(0)">ВОЗРОДИТЬСЯ<img src="./assets/images/respawn/ls.png"></button>
+        </div>
+        <div id="org-spawn">
+            <span id="org" class="gun">ТЕРРИТОРИЯ ФРАКЦИИ</span>
+            <b class="org-key">ВЫ ПОТЕРЯЕТЕ ОРУЖИИЕ И НАРКОТИКИ</b>
+            <div class="org-place-spawn">
+                <button onclick="spawn(3)">LSPD Mission Row</button>
+                <button onclick="spawn(4)">LSPD VineWood</button>
+            </div>
+            <button onclick="spawn(1)">ВОЗРОДИТЬСЯ<img src="./assets/images/respawn/ls.png"></button>
+        </div>
+        <div id="home-spawn">
+            <span id="home" class="active">ДОМ</span>
+            <b class="home-key">ВЫ НИЧЕГО НЕ ПОТЕРЯЕТЕ</b>
+            <button onclick="spawn(2)">ВОЗРОДИТЬСЯ<img src="./assets/images/respawn/ls.png"></button>
+        </div>
+
+        <div class="help">
+            <div class="help-ico">
+                <img src="./assets/images/icons/notification/info.png">
+            </div>
+            <div class="help-title">
+                С ВОЗВРАЩЕНИЕМ, ДОРОГУША.<br> Я УЖЕ СТАЛ ДУМАТЬ, ЧТО ТВОЙ ТОЩИЙ ЗАД ПОДСТРЕЛИЛИ.
+            </div>
+        </div>
+        <div class="logo">
+            <img src="./assets/images/hud/logo.png">
+        </div>
+    </div>
+</body>
+
+</html>

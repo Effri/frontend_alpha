@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link href="./assets/fonts/font/stylesheet.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="./assets/css/noty.css">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/u.css">
+    <link rel="stylesheet" href="./assets/css/auth.css" />
+    <link rel="stylesheet" href="./assets/css/auth_new.css" />
+    <link rel="stylesheet" href="./assets/css/auth_registration.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+</head>
+
+<body>
+    <div class="switch-content authDiv">
+
+        <main class="gta-acount  authorization  auth-page show">
+            <div class="bgshow"></div>
+            <div class="gta-acount__content">
+                <form id="auth-form" action="" method="POST">
+                    <div class="welcomeAuth">
+                        <div class="images"><img src="./assets/images/auth/logo.png"></div>
+                        <h1>Авторизация</h1>
+                        <p class="prev">Самое время продолжить игру, заходи...</p>
+                    </div>
+
+                    <div class="hl"></div>
+
+                    <div class="input-cont">
+                        <div class="label">Введите логин</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/name.svg"></div>
+                            <input type="text" class="the-input entry-login" name="entry-login" id="entry-login-id"
+                                placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <div class="label">Введите пароль</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/padlock.svg"></div>
+                            <input type="text" class="the-input entry-login" name="entry-login" id="entry-login-id"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <div class="btnEnter js-btn-auth">АВТОРИЗОВАТЬСЯ</div>
+                        <div class="btnEnter js-btn-register">РЕГИСТРАЦИЯ</div>
+                    </div>
+                    <div class="recovery-block">
+                        <div class="rec-text js-btn-restore">Забыл пароль</div>
+                        <div class="hl2"></div>
+                    </div>
+                    <div class="center">
+                        <label class="label">
+                            <input id="entry-savemy" name="entry-savemy" class="label__checkbox" type="checkbox" />
+                            <span class="label__text">
+                                <span class="label__check">
+                                    <i class="fa fa-check icon"></i>
+                                </span>
+                                <p class="savemy">Запомнить меня</p>
+                            </span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <main class="gta-acount  reg-and-restore restorepass  rest-page">
+            <div class="bgshow"></div>
+            <div class="gta-acount__content">
+                <form id="rest-form" action="" method="POST">
+
+                    <div class="welcomeAuth">
+                        <div class="images"><img src="./assets/images/auth/logo.png"></div>
+                        <h1>Восстановление</h1>
+                        <p class="prev">Если Вы забыли пароль, восстановите.</p>
+                    </div>
+
+                    <div class="hl"></div>
+                    <div class="input-cont">
+                        <div class="label">Введите Ваш логин</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/name.svg"></div>
+                            <input type="text" class="the-input new-user__login" name="new-user__login"
+                                id="new-user__login-id" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="btnEnter btn-restore-end" style="margin-left: 165px; margin-top: 77px;">ВОССТАНОВИТЬ
+                    </div>
+
+                    <div class="recovery-block" style="width: 80px;">
+                        <div class="rec-text js-btn-back">Назад</div>
+                        <div class="hl2"></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <main class="gta-acount reg-and-restore registration  reg-page">
+            <div class="bgshow"></div>
+            <div class="gta-acount__content">
+                <form id="reg-form" action="" method="POST">
+
+                    <div class="welcomeAuth">
+                        <div class="images"><img src="./assets/images/auth/logo.png"></div>
+                        <h1>Регистрация</h1>
+                        <p class="prev">Есть аккаунт? Вернитесь назад.</p>
+                    </div>
+
+                    <div class="hl"></div>
+
+                    <div class="input-cont">
+                        <div class="label">Введите Ваш логин</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/name.svg"></div>
+                            <input type="text" class="the-input new-user__login" name="new-user__login"
+                                id="new-user__login-id" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <div class="label">Введите Ваш EMAIL</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/email.svg"></div>
+                            <input class="the-input" type="email" name="new-user__email" id="new-user__email-id"
+                                placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <div class="label">Придумайте пароль</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/padlock.svg"></div>
+                            <input class="the-input " type="password" name="new-user__pw" id="new-user__pw-id"
+                                placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <div class="label">Повторите пароль</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/padlock.svg"></div>
+                            <input class="the-input " type="password" name="new-user__pw-repeat"
+                                id="new-user__pw-repeat-id" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <div class="label">Промокод</div>
+                        <div class="input-text">
+                            <div class="ico-box"><img src="assets/images/auth/promo.svg"></div>
+                            <input type="text" class="the-input" name="new-user__promo-code" id="new-user__promo-code"
+                                placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="btnEnter btn-register-end" style="margin-left: 165px;">ЗАРЕГИСТРИРОВАТЬСЯ</div>
+
+                    <div class="recovery-block" style="width: 80px;">
+                        <div class="rec-text js-btn-back">Назад</div>
+                        <div class="hl2"></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $('body').on('click', '.password-control', function () {
+                if ($('#entry-password-id').attr('type') == 'password') {
+                    $(this).addClass('view');
+                    $('#entry-password-id').attr('type', 'text');
+                } else {
+                    $(this).removeClass('view');
+                    $('#entry-password-id').attr('type', 'password');
+                }
+                return false;
+            });
+        </script>
+
+        <script>
+            $('body').on('click', '.password-control', function () {
+                if ($('#new-user__pw-id').attr('type') == 'password') {
+                    $(this).addClass('view');
+                    $('#new-user__pw-id').attr('type', 'text');
+                } else {
+                    $(this).removeClass('view');
+                    $('#new-user__pw-id').attr('type', 'password');
+                }
+                return false;
+            });
+        </script>
+
+        <script>
+            $('body').on('click', '.password-control', function () {
+                if ($('#new-user__pw-repeat-id').attr('type') == 'password') {
+                    $(this).addClass('view');
+                    $('#new-user__pw-repeat-id').attr('type', 'text');
+                } else {
+                    $(this).removeClass('view');
+                    $('#new-user__pw-repeat-id').attr('type', 'password');
+                }
+                return false;
+            });
+        </script>
+
+        <main class="gta-acount  slots  slots-page">
+            <header>
+                <div class="head-ico">
+                    <img src="./assets/images/icons/notification/info.png">
+                </div>
+                <div>
+                    <span>Areal</span>
+                    <div class="head-title">
+                        {{login}} НА ТВОЕМ СЧЕТУ {{redbucks}} AC <br>ИСПОЛЬЗУЙ С УМОМ, ПАРЕНЬ.
+                    </div>
+                </div>
+            </header>
+            <div class="select-peds">
+                <div class="ped-block active" id="ped-one">
+                    <div class="ped-title" id="name-1">
+                        {{slotL[0] + ' ' + slotL[1]}}
+                    </div>
+                    <div class="stats-character ">
+                        <span>УРОВЕНЬ<b>{{slotL[2]}}</b></span>
+                        <span>EXP<b>{{slotL[3]}} / {{slotL[4]}}</b></span>
+                        <span>ФРАКЦИЯ<b>{{slotL[5]}}</b></span>
+                        <span>НАЛИЧНЫЕ<b>${{slotL[6] | formatThousands}}</b></span>
+                        <span>БАНК<b>${{slotL[7] | formatThousands}}</b></span>
+                    </div>
+                    <div class="blocked-character">
+                        <b>Причина</b>
+                        <span>{{blockL[0]}}</span>
+                        <b>Выдал бан</b>
+                        <span>{{blockL[1]}}</span>
+                        <div class="date-block">
+                            <b>Дата бана</b><span>{{blockL[2]}}</span>
+                        </div>
+                        <div class="date-unblock">
+                            <b>Дата разбана</b><span>{{blockL[3]}}</span>
+                        </div>
+                    </div>
+                    <div class="create-character">
+                        <span>СЛУШАЙ,<br>ЭТОТ СЛОТ РЕАЛЬНО СВОБОДЕН.<br>ИСПОЛЬЗУЙ ЕГО С УМОМ.</span>
+                        <form id="create-person-one" action="" method="POST">
+                            <div class="input-cont1">
+                                <input type="text" name="new-person-1__name" id="new-person-1__name-id"
+                                    placeholder="Имя (только на английском)" pattern="[A-Za-z]" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="text" name="new-person-1__sername" id="new-person-1__sername-id"
+                                    placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required>
+                            </div>
+                        </form>
+                        <a href="#" onclick="downCreateCharacter(1)">Отмена</a>
+                    </div>
+                    <button id="btn-character-1">ВЫБРАТЬ</button>
+                    <div class="delete-character" id="del-modal-one">
+                        <span><b>Areal</b>СЛЫШЬ, НЕ ТОРОПИСЬ.</span> УВЕРЕН, ЧТО ХОЧЕШЬ ЕГО УДАЛИТЬ?
+                        <form id="delete-person-1" action="" method="POST">
+                            <div class="input-cont1">
+                                <input type="text" name="delete-person-1__name" id="delete-person-1__name-id"
+                                    placeholder="Имя" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="text" name="delete-person-1__sername" id="delete-person-1__sername-id"
+                                    placeholder="Фамилия" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="password" name="delete-person-1__pw" id="delete-person-1__pw-id"
+                                    placeholder="Пароль от аккаунта" required>
+                            </div>
+                        </form>
+                        <div class="delete-btn">
+                            <button class="js-delete-person-submit-1" type="submit">Да, погнали</button>
+                            <button onclick="removeModal(1)">Нет, подумаю</button>
+                        </div>
+                    </div>
+                    <a onclick="showmodalDelChar(1)"><img src="/assets/images/auth/del.png"></a>
+                </div>
+                <div class="ped-block" id="ped-two">
+                    <div class="ped-title" id="name-2">
+                        {{slotM[0]}} {{slotM[1]}}
+                    </div>
+                    <div class="stats-character">
+                        <span>УРОВЕНЬ<b>{{slotM[2]}}</b></span>
+                        <span>EXP<b>{{slotM[3]}} / {{slotM[4]}}</b></span>
+                        <span>ФРАКЦИЯ<b>{{slotM[5]}}</b></span>
+                        <span>НАЛИЧНЫЕ<b>$ {{slotM[6] | formatThousands}}</b></span>
+                        <span>БАНК<b>$ {{slotM[7] | formatThousands}}</b></span>
+                    </div>
+                    <div class="blocked-character">
+                        <b>Причина</b>
+                        <span>{{blockM[0]}}</span>
+                        <b>Выдал бан</b>
+                        <span>{{blockM[1]}}</span>
+                        <div class="date-block">
+                            <b>Дата бана</b><span>{{blockM[2]}}</span>
+                        </div>
+                        <div class="date-unblock">
+                            <b>Дата разбана</b><span>{{blockM[3]}}</span>
+                        </div>
+                    </div>
+                    <div class="create-character">
+                        <span>СЛУШАЙ,<br>ЭТОТ СЛОТ РЕАЛЬНО СВОБОДЕН.<br>ИСПОЛЬЗУЙ ЕГО С УМОМ.</span>
+                        <form id="create-person-two" action="" method="POST">
+                            <div class="input-cont1">
+                                <input type="text" name="new-person-2__name" id="new-person-2__name-id"
+                                    placeholder="Имя (только на английском)" pattern="[A-Za-z]" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="text" name="new-person-2__sername" id="new-person-2__sername-id"
+                                    placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required>
+                            </div>
+                        </form>
+                        <a href="#" onclick="downCreateCharacter(2)">Отмена</a>
+                    </div>
+                    <button id="btn-character-2">ВЫБРАТЬ</button>
+                    <div class="delete-character" id="del-modal-two">
+                        <span><b>Areal</b>СЛЫШЬ, НЕ ТОРОПИСЬ.</span> УВЕРЕН, ЧТО ХОЧЕШЬ ЕГО УДАЛИТЬ?
+                        <form id="delete-person-2" action="" method="POST">
+                            <div class="input-cont1">
+                                <input type="text" name="delete-person-2__name" id="delete-person-2__name-id"
+                                    placeholder="Имя" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="text" name="delete-person-2__sername" id="delete-person-2__sername-id"
+                                    placeholder="Фамилия" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="password" name="delete-person-2__pw" id="delete-person-2__pw-id"
+                                    placeholder="Пароль от аккаунта" required>
+                            </div>
+                        </form>
+                        <div class="delete-btn">
+                            <button class="js-delete-person-submit-2" type="submit">Да, погнали</button>
+                            <button onclick="removeModal(2)">Нет, подумаю</button>
+                        </div>
+                    </div>
+                    <a onclick="showmodalDelChar(2)"><img src="/assets/images/auth/del.png"></a>
+                </div>
+                <div class="ped-block" id="ped-three">
+                    <div class="ped-title" id="name-3">
+                        {{slotR[0]}} {{slotR[1]}}
+                    </div>
+                    <div class="buy-slot-character active">
+                        <div class="person-cont">
+                            <h2>ЕСЛИ ТЕБЕ ПОНАДОБИТЬСЯ<br>ЭТОТ СЛОТ, ТО ТЫ ЗНАЕШЬ<br>ВО СКОЛЬКО ОН ТЕБЕ ОБОЙДЕТСЯ.</h2>
+                            <p>ЦЕНА СЛОТА - 1000 AC</p>
+                            <p>+ БОНУС: VIPGOLD НА 1 МЕСЯЦ.</p>
+                        </div>
+                        <div class="buy-modal" id="buy-slot-3">
+                            <span><b>Areal</b>СЛЫШЬ, НЕ ТОРОПИСЬ.</span> УВЕРЕН, ЧТО ХОЧЕШЬ ЕГО КУПИТЬ?
+                            <div class="delete-btn">
+                                <button class="js-unlock-slot-3" type="submit">Да, погнали</button>
+                                <button onclick="removeModal(4)">Нет, подумаю</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-character">
+                        <span>УРОВЕНЬ<b>{{slotR[2]}}</b></span>
+                        <span>EXP<b>{{slotR[3]}} / {{slotR[4]}}</b></span>
+                        <span>ФРАКЦИЯ<b>{{slotR[5]}}</b></span>
+                        <span>НАЛИЧНЫЕ<b>${{slotR[6] | formatThousands}}</b></span>
+                        <span>БАНК<b>${{slotM[7] | formatThousands}}</b></span>
+                    </div>
+                    <div class="blocked-character">
+                        <b>Причина</b>
+                        <span>{{blockR[0]}}</span>
+                        <b>Выдал бан</b>
+                        <span>{{blockR[1]}}</span>
+                        <div class="date-block">
+                            <b>Дата бана</b><span>{{blockR[2]}}</span>
+                        </div>
+                        <div class="date-unblock">
+                            <b>Дата разбана</b><span>{{blockR[3]}}</span>
+                        </div>
+                    </div>
+                    <div class="create-character">
+                        <span>СЛУШАЙ,<br>ЭТОТ СЛОТ РЕАЛЬНО СВОБОДЕН.<br>ИСПОЛЬЗУЙ ЕГО С УМОМ.</span>
+                        <form id="create-person-three" action="" method="POST">
+                            <div class="input-cont1">
+                                <input type="text" name="new-person-3__name" id="new-person-3__name-id"
+                                    placeholder="Имя (только на английском)" pattern="[A-Za-z]" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="text" name="new-person-3__sername" id="new-person-3__sername-id"
+                                    placeholder="Фамилия (только на английском)" pattern="[A-Za-z]" required>
+                            </div>
+                        </form>
+                        <a href="#" onclick="downCreateCharacter(3)">Отмена</a>
+                    </div>
+                    <button id="btn-character-3">ВЫБРАТЬ</button>
+                    <div class="delete-character" id="del-modal-three">
+                        <span><b>Areal</b>СЛЫШЬ, НЕ ТОРОПИСЬ.</span> УВЕРЕН, ЧТО ХОЧЕШЬ ЕГО УДАЛИТЬ?
+                        <form id="delete-person-3" action="" method="POST">
+                            <div class="input-cont1">
+                                <input type="text" name="delete-person-3__name" id="delete-person-3__name-id"
+                                    placeholder="Имя" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="text" name="delete-person-3__sername" id="delete-person-3__sername-id"
+                                    placeholder="Фамилия" required>
+                            </div>
+
+                            <div class="input-cont1">
+                                <input type="password" name="delete-person-3__pw" id="delete-person-3__pw-id"
+                                    placeholder="Пароль от аккаунта" required>
+                            </div>
+                        </form>
+                        <div class="delete-btn">
+                            <button class="js-delete-person-submit-3" type="submit">Да, погнали</button>
+                            <button onclick="removeModal(3)">Нет, подумаю</button>
+                        </div>
+                    </div>
+                    <a onclick="showmodalDelChar(3)"><img src="/assets/images/auth/del.png"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        Vue.filter('formatThousands', (x) => {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./assets/js/notify.js"></script>
+    <script src="./assets/js/noty.min.js"></script>
+    <script src="./assets/js/u.js"></script>
+    <script src="./assets/js/auth.js"></script>
+</body>
+
+</html>
