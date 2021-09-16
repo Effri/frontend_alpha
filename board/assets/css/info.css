@@ -1,0 +1,77 @@
+.info {
+    user-select: none;
+    position: absolute;
+    /* width: 26vh; */
+    /* height: 18vh; */
+    /* background: linear-gradient(180deg, rgba(26, 26, 26, 0.92) 0%, rgba(0, 14, 27, 0.88) 100%); */
+    border: 1px solid rgb(255 255 255 / 12%);
+    background-color: #1b1b1bd6;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    border-radius: 0.5vh 0.5vh 0 0;
+    flex-wrap: nowrap;
+}
+
+.info .header {
+    width: 100%;
+    /* height: 6vh; */
+    display: flex;
+    /* border-bottom: 0.2vh solid white; */
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.info .header .text {
+    /* width: 23vh; */
+    width: 100%;
+    padding: 1vh;
+    /* height: 3vh; */
+    /* padding-left: 1vh; */
+    /* padding-top: 0.3vh; */
+    font-size: 1.6vh;
+}
+
+.info .clos {
+    /* width: 3vh; */
+    /* height: 3vh; */
+    /* font-size: 2vh; */
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.info .box {
+    /* width: 100%; */
+    /* height: 20vh; */
+    height: 90px;
+    padding: 1vh 1.5vh;
+    font-size: 1.6vh;
+}
+
+.info .button {
+    width: 100%;
+    /* height: 3vh; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .btns {
+    width: 30%;
+    /* height: -webkit-fill-available; */
+    font-size: 1.5vh;
+    color: rgb(255 255 255 / 42%);
+    background: rgba(68, 68, 68, 0.28);
+    padding: 0.6vh;
+}
+
+.info .btns:hover {
+    background-color: #ff5722;
+    color: white;
+}
+
+/* .use {
+    background-color: #ff5722 !important;
+    color: white !important;
+} */
