@@ -901,7 +901,7 @@ body {
 .inv .center {
 	color: #fff;
 	height: 63vh;
-	width: 48vh;
+	width: 50vh;
 	/* margin-top: 11.9vh; */
 	margin-top: 14vh;
 	/* left: 40vh; */
@@ -912,7 +912,7 @@ body {
 
 .inv .center .huminv {
 	color: #fff;
-	height: 51vh;
+	height: 58vh;
 	padding: 0vh 1vh 3vh 1.5vh;
 }
 
@@ -937,7 +937,8 @@ body {
 	color: #fff;
 	background: url(../img/hum.png);
 	background-size: cover;
-	height: 39vh;
+	height: 56vh;
+	overflow-y: scroll;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 1.5vh;
@@ -1776,11 +1777,13 @@ body {
 
 .inv .right .dopinv .items {
 	color: #fff;
-	height: 59vh;
+	height: 55vh;
+	overflow-y: scroll;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 1.5vh;
 	padding: 1vh 4vh;
+	padding-right: 3vh;
 	align-content: flex-start;
 }
 
@@ -1955,7 +1958,7 @@ body .item img {
 	/* width: 3.5vh; */
 	/* height: 3.5vh; */
 	/* width: auto; */
-	height: 35px;
+	height: 3.8vh;
 	/* position: relative; */
 	/* left: 1.7595vh; */
 	/* top: 1.7595vh; */
