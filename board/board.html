@@ -47,7 +47,7 @@
 								<img class="man" src="./assets/images/board/man.png">
 								<div class="items1">
 									<div class="item1 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/cap.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/cap.svg" alt=""> -->
 									<!-- <p>Головной Убор</p> -->
 								</div>
 								<!-- <div class="items2">
@@ -56,7 +56,7 @@
 								</div> -->
 								<div class="items3">
 									<div class="item3 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/eyeglasses.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/eyeglasses.svg" alt=""> -->
 									<!-- <p>Очки</p> -->
 								</div>
 								<!-- <div class="items4">
@@ -65,7 +65,7 @@
 								</div> -->
 								<div class="items5">
 									<div class="item5 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/bulletproof-vest.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/bulletproof-vest.svg" alt=""> -->
 									<!-- <p>Бронежилет</p> -->
 								</div>
 								<!-- <div class="items6">
@@ -74,7 +74,7 @@
 								</div> -->
 								<div class="items7">
 									<div class="item7 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/sweatshirt.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/sweatshirt.svg" alt=""> -->
 									<!-- <p>Куртка</p> -->
 								</div>
 								<!-- <div class="items8">
@@ -83,27 +83,27 @@
 								</div> -->
 								<div class="items9">
 									<div class="item9 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/gloves.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/gloves.svg" alt=""> -->
 									<!-- <p>Перчатки</p> -->
 								</div>
 								<div class="items10">
 									<div class="item10 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/tshirt.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/tshirt.svg" alt=""> -->
 									<!-- <p>Футболка</p> -->
 								</div>
 								<div class="items11">
 									<div class="item11 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/watch.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/watch.svg" alt=""> -->
 									<!-- <p>Часы</p> -->
 								</div>
 								<div class="items12">
 									<div class="item12 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/pants.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/pants.svg" alt=""> -->
 									<!-- <p>Штаны</p> -->
 								</div>
 								<div class="items13">
 									<div class="item13 item_block"></div>
-									<img class="item_icon" src="./assets/images/board/sneakers.svg" alt="">
+									<!-- <img class="item_icon" src="./assets/images/board/sneakers.svg" alt=""> -->
 									<!-- <p>Ботинки</p> -->
 								</div>
 							</div>
@@ -134,6 +134,33 @@
 							</div> -->
 						</div>
 						<div class="center droppable" data-action="1" data-type="inv">
+							<div class="fast_slot">
+								<div class="center_header fast">
+                                    <img src="./assets/images/board/icon_two.png" alt="">
+                                    <div class="left_header-wrapper">
+                                        <div class="left_header-title">КАРМАНЫ</div>
+                                        <div class="left_header-info">ПРЕДМЕТЫ ДЛЯ БЫСТРОГО ДОСТУПА</div>
+                                    </div>
+                                </div>
+								
+								<div class="fast_block">
+					
+									<div v-if="!savedFast[0]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(0)"></div>
+									<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[0][0] && item[1] == savedFast[0][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+									<div v-if="!savedFast[1]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(1)"></div>
+									<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[1][0] && item[1] == savedFast[1][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+									<div v-if="!savedFast[2]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(2)"></div>
+									<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[2][0] && item[1] == savedFast[2][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+									<div v-if="!savedFast[3]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(3)"></div>
+									<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[3][0] && item[1] == savedFast[3][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+									<div v-if="!savedFast[4]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(4)"></div>
+									<div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[4][0] && item[1] == savedFast[4][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
+									<!-- <div style="overflow-y:scroll; margin: 0px 45px;">
+										<div class="items hum"></div>
+									</div> -->
+									
+								</div>
+							</div>
 							<div class="huminv">
                                 <div class="center_header">
                                     <img src="./assets/images/board/icon_three.png" alt="">
@@ -158,23 +185,6 @@
 							:key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]"
 							:subdata="item[3]" type="inv" />
 
-                                        <div class="fast_block">
-					
-                                            <div v-if="!savedFast[0]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(0)"></div>
-                                            <div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[0][0] && item[1] == savedFast[0][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
-                                            <div v-if="!savedFast[1]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(1)"></div>
-                                            <div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[1][0] && item[1] == savedFast[1][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
-                                            <div v-if="!savedFast[2]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(2)"></div>
-                                            <div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[2][0] && item[1] == savedFast[2][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
-                                            <div v-if="!savedFast[3]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(3)"></div>
-                                            <div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[3][0] && item[1] == savedFast[3][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
-                                            <div v-if="!savedFast[4]" :class="selectFastSlot ? 'fastSlotField selecting' : 'fastSlotField'" v-on:click="useFastSlot(4)"></div>
-                                            <div v-else> <item v-for="(item, index) in items" v-if="item[0] == savedFast[4][0] && item[1] == savedFast[4][1]" :key="key" :id="item[0]" :index="index" :count="item[1]" :isactive="item[2]" :subdata="item[3]" type="fast"/> </div>
-                                            <div style="overflow-y:scroll; margin: 0px 45px;">
-                                                <div class="items hum"></div>
-                                            </div>
-                                            
-                                        </div>
 
 								</div>
 							</div>
@@ -279,10 +289,11 @@
 			<div class="text">{{name}}</div>
 			<div class="clos" v-on:click="hide">x</div>
 		</div>
+		<div class="border_line"></div>
 		<div class="box">{{subtext}}</div>
 		<div class="button">
-			<div class="btns use" v-on:click="btn(1)">Использ</div>
-			<div class="btns" v-if="type" v-on:click="btn(2)">Передать</div>
+			<div class="btns use" v-on:click="btn(1)">Надель</div>
+			<div class="btns" v-if="type" v-on:click="btn(2)">Обмен</div>
 			<div class="btns" v-if="!type" v-on:click="btn(3)">Взять</div>
 			<div class="btns" v-on:click="btn(4)">Выбросить</div>
 		</div>
