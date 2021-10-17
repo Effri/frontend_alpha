@@ -293,8 +293,8 @@ Vue.component('item', {
 var board = new Vue({
     el: ".inv",
     data: {
-        active: true,
-        outside: true,
+        active: false,
+        outside: false,
         outType: 0,
         outHead: "Багажник",
         item: ["Уровень", "Предупреждения", "Дата создания", "Номер телефона", "Номер счёта", "Номер паспорта", "Организация", "Ранг", "Работа", "Статус"],
